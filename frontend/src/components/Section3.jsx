@@ -32,7 +32,7 @@ export default function Section1() {
           transition={{ duration: 1 }}
         >
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-26%20144015-ECQQFovBtlpvEn3L25z8BIXaksGTvR.png"
+            src="./web.jpg"
             alt="Abstract 3D shape"
             className="w-full h-auto"
           />

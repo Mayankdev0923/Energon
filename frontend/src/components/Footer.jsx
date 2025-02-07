@@ -101,10 +101,22 @@ export default function Footer() {
 
           <div className="flex space-x-6 mt-4 sm:mt-0">
             {[
-              { icon: Facebook, href: "#" },
-              { icon: Instagram, href: "#" },
-              { icon: Linkedin, href: "#" },
-              { icon: Github, href: "#" },
+              {
+                icon: Facebook,
+                href: "https://www.facebook.com/people/Energon/61572751180424/",
+              },
+              {
+                icon: Instagram,
+                href: "https://www.linkedin.com/company/energon-app/",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/company/energon-app/",
+              },
+              {
+                icon: Github,
+                href: "https://github.com/Mayankdev0923/Energon",
+              },
             ].map(({ icon: Icon, href }, index) => (
               <motion.a
                 key={index}

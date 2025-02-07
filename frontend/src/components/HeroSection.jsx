@@ -45,7 +45,7 @@ function HomePage() {
           </div>
           {/* Title with gradient */}
           <div className="text-center space-y-4 mb-20">
-            <h1 className="text-7xl font-bold bg-gradient-to-b from-white via-gray-300 to-transparent bg-clip-text text-transparent">
+            <h1 className="text-7xl font-bold bg-gradient-to-t from-white via-gray-300 to-transparent bg-clip-text text-transparent pb-4">
               Energon
             </h1>
             <p className="text-2xl text-gray-400">
