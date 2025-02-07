@@ -147,7 +147,7 @@ function UserDashboard() {
                             Grid ID: {tx.grid_id}
                           </p>
                           <p className="text-sm text-gray-400">
-                            Buyer: {tx.buyer_email}
+                            Seller : {tx.buyer_email}
                           </p>
                         </div>
                         <p className="font-bold text-blue-500">
