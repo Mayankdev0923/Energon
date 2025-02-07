@@ -95,7 +95,6 @@ app.post("/api/pushFuelLocation", async (req, res) => {
     } = req.body;
 
     const newLocation = new FuelLocation({
-      id,
       name,
       address,
       coordinates,

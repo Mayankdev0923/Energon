@@ -26,6 +26,7 @@ import type { FuelLocation } from "../types";
 import { useNavigate } from "react-router-dom";
 import "ol/ol.css";
 
+
 type LocationBoxProps = {
   icon: React.ReactNode;
   label: string;

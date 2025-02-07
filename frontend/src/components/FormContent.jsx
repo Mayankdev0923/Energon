@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { fuelLocations } from '../data';  // Importing the fuelLocations array
 
 function App() {
   const [coordinates, setCoordinates] = useState({ lat: "", lng: "" });
@@ -69,6 +70,12 @@ function App() {
       const result = await response.json();
       if (response.ok) {
         alert("Fuel location added successfully!");
+
+        // Update the fuelLocations array with new entry
+        const newId = (fuelLocations.length + 1).toString();  // Generate new ID (you can adjust the logic)
+        const newLocation = { id: newId, ...formData };
+        fuelLocations.push(newLocation);  // Push the new location to fuelLocations
+
         // Reset form
         setName("");
         setEmail("");
@@ -233,14 +240,15 @@ function App() {
                   Get Current Location
                 </Button>
               </div>
-            </div>
+            
 
-            <Button
-              type="submit"
-              className="w-full bg-gradient-to-r mt-4 from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl"
-            >
-              Submit
-            </Button>
+              <Button
+                type="submit"
+                className="w-full bg-gradient-to-r mt-4 from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl"
+              >
+                Submit
+              </Button>
+            </div>
           </form>
         </div>
       </Card>
