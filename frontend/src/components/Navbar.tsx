@@ -89,9 +89,9 @@ function NavLinks({ mobile = false }) {
       <Link to="/" className={classes}>
         Home
       </Link>
-      <Link to="/rankings" className={classes}>
+      {/* <Link to="/rankings" className={classes}>
         Rankings
-      </Link>
+      </Link> */}
       {isAuthenticated && ( // Only show Dashboard link if authenticated
         <Link to="/dashboard" className={classes}>
           Dashboard

@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ChatContainer from "./pages/ChatContainer";
-import Rankings from "./pages/Rankings";
+// import Rankings from "./pages/Rankings";
 import TradeEnergy from "./pages/TradeEnergy";
 import MarketPlace from "./pages/EnergyMarketPlace";
 // import AdminDashboard from "./pages/AdminDashboard";
@@ -49,9 +49,9 @@ function AuthPage() {
   return <Auth />;
 }
 
-function RankingsPage() {
-  return <Rankings />;
-}
+// function RankingsPage() {
+//   return <Rankings />;
+// }
 
 function ProtectedRoute({ element }) {
   const { isAuthenticated } = React.useContext(AuthContext); // Get authentication state
@@ -75,7 +75,7 @@ function App() {
               element={<ProtectedRoute element={<DashBoard />} />}
             />
             <Route path="/form" element={<Form />} />
-            <Route path="/rankings" element={<RankingsPage />} />
+            {/* <Route path="/rankings" element={<RankingsPage />} /> */}
             <Route path="/chats" element={<ProtectedRoute element={<Chats2 />} />} />
             <Route path="/auth" element={<AuthPage />} />
             <Route path="/market" element={<MarketPlace />} />
