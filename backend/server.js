@@ -58,6 +58,62 @@ const User = mongoose.model("User", UserSchema);
 //   },
 //   { collection: "messages" }
 // );
+const FuelLocationSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    address: { type: String, required: true },
+    coordinates: { type: [Number], required: true }, // [longitude, latitude]
+    price: { type: Number, required: true },
+    availability: { type: Number, required: true },
+    rating: { type: Number, required: true },
+    email: { type: String, required: true },
+  },
+  { collection: "grids" }
+);
+
+const FuelLocation = mongoose.model("grids", FuelLocationSchema);
+
+app.get("/api/getFuelLocations", async (req, res) => {
+  try {
+    const locations = await FuelLocation.find({});
+    res.json(locations);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching locations", error });
+  }
+});
+
+app.post("/api/pushFuelLocation", async (req, res) => {
+  try {
+    const {
+      name,
+      address,
+      coordinates,
+      price,
+      availability,
+      rating,
+      email,
+    } = req.body;
+
+    const newLocation = new FuelLocation({
+      id,
+      name,
+      address,
+      coordinates,
+      price,
+      availability,
+      rating,
+      email,
+    });
+
+    await newLocation.save();
+    res.status(201).json({ message: "Fuel location added successfully" });
+  } catch (error) {
+    console.error("Error adding location:", error);
+    res
+      .status(500)
+      .json({ message: "Error adding location", error: error.response });
+  }
+});
 
 const TransactionSchema = new mongoose.Schema(
   {

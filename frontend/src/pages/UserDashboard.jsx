@@ -48,15 +48,6 @@ function UserDashboard() {
     fetchTransactions();
   }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("loggedInUser");
-    handleSuccess("User Logged Out");
-    setTimeout(() => {
-      navigate("/auth");
-    }, 1000);
-  };
-
   const navigatetofind = () => {
     navigate("/findenergy");
   };
