@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { fuelLocations } from '../data';  // Importing the fuelLocations array
+import { fuelLocations } from "../data"; // Importing the fuelLocations array
 
 function App() {
   const [coordinates, setCoordinates] = useState({ lat: "", lng: "" });
@@ -69,12 +69,12 @@ function App() {
 
       const result = await response.json();
       if (response.ok) {
-        alert("Fuel location added successfully!");
+        alert("Energy added successfully!");
 
         // Update the fuelLocations array with new entry
-        const newId = (fuelLocations.length + 1).toString();  // Generate new ID (you can adjust the logic)
+        const newId = (fuelLocations.length + 1).toString(); // Generate new ID (you can adjust the logic)
         const newLocation = { id: newId, ...formData };
-        fuelLocations.push(newLocation);  // Push the new location to fuelLocations
+        fuelLocations.push(newLocation); // Push the new location to fuelLocations
 
         // Reset form
         setName("");
@@ -100,7 +100,7 @@ function App() {
         <div className="space-y-8">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold text-white">
-              Fuel Location Information
+              List Your Own Energy
             </h1>
             <p className="text-gray-400">
               Please fill in the required details below
@@ -240,7 +240,6 @@ function App() {
                   Get Current Location
                 </Button>
               </div>
-            
 
               <Button
                 type="submit"
