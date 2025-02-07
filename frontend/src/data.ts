@@ -9,7 +9,7 @@ export let fuelLocations: FuelLocation[] = [
     price: 0.45,
     availability: 50,
     rating: 4.5,
-    email: 'r@e.com',
+    email: 'a@a.com',
   },
   {
     id: '2',
@@ -18,8 +18,8 @@ export let fuelLocations: FuelLocation[] = [
     coordinates: [77.035, 28.463],  // New coordinates in Gurugram
     price: 5.99,
     availability: 100,
-    rating: 4.2,
-    email: 'j@k.com',
+    rating: 4.2,  
+    email: 'b@b.com',
 
   },
   {
@@ -30,7 +30,7 @@ export let fuelLocations: FuelLocation[] = [
     price: 3.45,
     availability: 20,
     rating: 4.8,
-    email: 's@s.com',
+    email: 'c@c.com',
 
   },
   // Add more fuel stations or locations as needed for Gurugram
