@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Battery, Droplet, Wallet, ArrowLeft, Check } from "lucide-react";
 import axios from "axios";
 import { fuelLocations } from "../data";
+import { connectWallet } from "../components/metamask";
+
 
 const EnergyMarketplace = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
+  const [walletAddress, setWalletAddress] = useState<string | null>(null);
+
 
   // Extract station details from URL
   const stationName = searchParams.get("name") || "Sample Grid";
@@ -65,6 +69,10 @@ const EnergyMarketplace = () => {
         if (stationIndex !== -1) {
           fuelLocations[stationIndex].availability -= selectedAmount;
         }
+
+        await connectWallet();
+          console.log("fetched");
+          
         setShowConfirmation(true);
       } else {
         throw new Error("Transaction failed");
