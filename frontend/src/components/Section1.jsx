@@ -11,7 +11,7 @@ export default function Section1() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Ready to make some noise?
+            Revolutionizing trust, security, and transparency
           </motion.h1>
           <motion.p
             className="text-gray-400 text-lg md:text-xl max-w-2xl"
@@ -19,12 +19,11 @@ export default function Section1() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Let's start making music on May 5. vyt hgcvytcoutcytcoygcyotcyotc
-            hufitrseuwaeeeeeeeeeeeeeeurzxtrjxfciyy ytcfir6xxxxxxxxxxxxx f
-            myidtr6xtujfjfxtrxxirtfxtesdyfyttxeuzcygctr
-            xrexezezujfxitrxezurzjtfxtxrxfjxjutx
+            Unlock efficiency, reduce costs, and ensure accountability.
+            Blockchain eliminates intermediaries, enhances security, and fosters
+            a transparent ecosystem for a cleaner, smarter, and decentralized
+            energy future.
           </motion.p>
-          
         </div>
         <motion.div
           className="relative"
@@ -33,14 +32,12 @@ export default function Section1() {
           transition={{ duration: 1 }}
         >
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-26%20144015-ECQQFovBtlpvEn3L25z8BIXaksGTvR.png"
+            src="./bitcoin.jpg"
             alt="Abstract 3D shape"
             className="w-full h-auto"
           />
         </motion.div>
       </div>
-
-      
     </section>
   );
 }

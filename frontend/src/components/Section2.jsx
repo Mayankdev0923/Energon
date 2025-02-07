@@ -4,18 +4,18 @@ import { useRef } from "react";
 const testimonials = [
   {
     quote:
-      "Boost your product and service's credibility by adding testimonials from your clients. People love recommendations so feedback from others who've tried it is invaluable.",
-    company: "Hollis & Reed",
+      "Harnessing renewable energy creates a sustainable future by reducing carbon emissions and combating climate change, ensuring cleaner air for generations to come.",
+    company: "Environmental Impact: A Cleaner, Greener Future",
   },
   {
     quote:
-      "Boost your product and service's credibility by adding testimonials from your clients. People love recommendations so feedback from others who've tried it is invaluable.",
-    company: "Hillstreet Industries",
+      "Renewable energy lowers dependency on fossil fuels, boosting energy security while supporting local economies through green jobs and innovation.",
+    company: "Energy Security: Reducing Dependence on Fossil Fuels",
   },
   {
     quote:
-      "Boost your product and service's credibility by adding testimonials from your clients. People love recommendations so feedback from others who've tried it is invaluable.",
-    company: "Studio Rallia",
+      "By embracing renewables, we unlock cost-effective solutions, reducing energy bills while promoting energy independence and a resilient grid.",
+    company: "Economic Growth: Driving Innovation and Job Creation",
   },
 ];
 
@@ -46,11 +46,7 @@ export default function Section2() {
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
           >
-            COMPANIES
-            <br />
-            WE'VE
-            <br />
-            WORKED WITH
+            THE POWER OF RENEWABLE ENERGY
           </motion.h2>
           <motion.div
             className="relative"
@@ -60,7 +56,7 @@ export default function Section2() {
             transition={{ duration: 1 }}
           >
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-26%20144031-mj4YMj51Dv2n4tuSwmX7KGeqPE1OVO.png"
+              src="./recycle.jpg"
               alt="Abstract 3D shape"
               className="w-full h-auto"
             />
@@ -81,7 +77,9 @@ export default function Section2() {
               className="rounded-2xl border border-gray-800 p-6 backdrop-blur-sm bg-black/50 transition-all duration-300 hover:scale-[1.02] hover:border-gray-600"
             >
               <p className="text-gray-300 mb-4">{testimonial.quote}</p>
-              <p className="text-fuchsia-500 font-medium">— {testimonial.company}</p>
+              <p className="text-fuchsia-500 font-medium">
+                — {testimonial.company}
+              </p>
             </motion.div>
           ))}
         </motion.div>

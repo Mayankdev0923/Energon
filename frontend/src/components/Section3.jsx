@@ -11,7 +11,7 @@ export default function Section1() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Ready to make some noise?
+            Empowering Individuals: Decentralized Control and Profitability{" "}
           </motion.h1>
           <motion.p
             className="text-gray-400 text-lg md:text-xl max-w-2xl"
@@ -19,12 +19,11 @@ export default function Section1() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Let's start making music on May 5. vyt hgcvytcoutcytcoygcyotcyotc
-            hufitrseuwaeeeeeeeeeeeeeeurzxtrjxfciyy ytcfir6xxxxxxxxxxxxx f
-            myidtr6xtujfjfxtrxxirtfxtesdyfyttxeuzcygctr
-            xrexezezujfxitrxezurzjtfxtxrxfjxjutx
+            By using our platform, users gain direct control over their energy
+            transactions, allowing them to buy and sell energy seamlessly while
+            earning from surplus power, all in a secure and decentralized
+            ecosystem
           </motion.p>
-          
         </div>
         <motion.div
           className="relative"
@@ -39,8 +38,6 @@ export default function Section1() {
           />
         </motion.div>
       </div>
-
-      
     </section>
   );
 }
